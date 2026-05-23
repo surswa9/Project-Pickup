@@ -331,9 +331,22 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
           <Logo className="w-24 h-24 mb-10" />
           <div className="flex gap-12 mb-16">
-            <Camera className="w-6 h-6 text-gray-500 hover:text-white transition-colors cursor-pointer" />
-            <Mail className="w-6 h-6 text-gray-500 hover:text-white transition-colors cursor-pointer" />
-          </div>
+  
+  {/* Instagram / Camera icon */}
+  <a
+    href="https://instagram.com/project.pickup"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <Camera className="w-6 h-6 text-gray-500 hover:text-white transition-colors cursor-pointer" />
+  </a>
+
+  {/* Email icon */}
+  <a href="mailto:suryathesekar@gmail.com">
+    <Mail className="w-6 h-6 text-gray-500 hover:text-white transition-colors cursor-pointer" />
+  </a>
+
+</div>
           <p className="text-gray-800 text-[10px] font-black uppercase tracking-[1em]">
             © PROJECT PICKUP MMXXVII • BOSTON
           </p>
