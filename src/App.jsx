@@ -361,7 +361,7 @@ const App = () => {
             
             <ul className="grid md:grid-cols-2 gap-6 text-left mb-12">
               {[
-                '18 Guaranteed Matchups', 
+                '14 Guaranteed Weeks of Play', 
                 'Official League Shorts', 
                 'See your Highlights on our IG', 
                 'Reserved 1.5H Court Slots', 
