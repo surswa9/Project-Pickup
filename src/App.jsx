@@ -308,38 +308,20 @@ const App = () => {
               ))}
             </ul>
 
-            <form className="space-y-4" onSubmit={handleApply}>
-              <div className="grid md:grid-cols-2 gap-4">
-                <input required type="text" placeholder="Full Name" className="w-full bg-black border border-white/10 p-5 rounded-2xl focus:outline-none focus:border-orange-500 font-bold" 
-                  onChange={(e) => setFormData({...formData, name: e.target.value})} />
-                <input required type="email" placeholder="Email Address" className="w-full bg-black border border-white/10 p-5 rounded-2xl focus:outline-none focus:border-orange-500 font-bold" 
-                  onChange={(e) => setFormData({...formData, email: e.target.value})} />
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <select required className="w-full bg-black border border-white/10 p-5 rounded-2xl focus:outline-none focus:border-orange-500 font-bold text-gray-400"
-                  onChange={(e) => setFormData({...formData, league: e.target.value})}>
-                  <option value="">Select Your League Tier</option>
-                  <option value="elite">Elite League (Competitive)</option>
-                  <option value="social">Social League (Recreational)</option>
-                </select>
-                <input required type="text" placeholder="Team Name" className={`w-full bg-black border ${error ? 'border-red-500' : 'border-white/10'} p-5 rounded-2xl focus:outline-none focus:border-orange-500 font-bold`} 
-                  onChange={(e) => setFormData({...formData, teamName: e.target.value})} />
-              </div>
+           <div className="text-center">
+  <p className="text-gray-300 mb-8 font-bold uppercase tracking-wide">
+    Click below to apply through our official registration form
+  </p>
 
-              {error && (
-                <div className="flex items-center gap-2 text-red-500 text-sm font-bold uppercase tracking-tight text-left px-2">
-                  <AlertCircle size={16} /> {error}
-                </div>
-              )}
-
-              <textarea placeholder="Experience level / Basketball background" rows="4" className="w-full bg-black border border-white/10 p-5 rounded-2xl focus:outline-none focus:border-orange-500 font-bold" 
-                onChange={(e) => setFormData({...formData, experience: e.target.value})} />
-              
-              <button type="submit" className="w-full py-6 bg-white text-black font-black uppercase text-lg tracking-widest skew-x-[-10deg] hover:bg-orange-500 hover:text-white transition-all">
-                Send Application
-              </button>
-            </form>
+  <a
+    href="https://tally.so/r/YOUR_FORM_ID"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-block w-full py-6 bg-white text-black font-black uppercase text-lg tracking-widest skew-x-[-10deg] hover:bg-orange-500 hover:text-white transition-all"
+  >
+    Apply to Play
+  </a>
+</div>
           </div>
         </div>
       </section>
