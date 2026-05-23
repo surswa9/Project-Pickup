@@ -141,7 +141,7 @@ const App = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-8">
-            {['Format', 'Schedule', 'Standings', 'Join'].map((item) => (
+            {['Format', 'Standings', 'Join'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors">
                 {item}
               </a>
