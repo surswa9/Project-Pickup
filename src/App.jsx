@@ -147,7 +147,7 @@ const App = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-8">
-            {['Format', 'Standings'].map((item) => (
+            {['Format', 'Standings', 'Info'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors">
                 {item}
               </a>
@@ -292,7 +292,58 @@ const App = () => {
           </div>
         </div>
       </section>
+{/* Info Section */}
+<section id="info" className="py-32 px-6 max-w-5xl mx-auto">
+  <div className="text-center mb-16">
+    <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter">
+      League <span className="text-orange-500">Info</span>
+    </h2>
+    <div className="h-2 w-32 bg-orange-500 skew-x-[-20deg] mx-auto mt-6"></div>
+  </div>
 
+  <div className="bg-neutral-900/60 border border-white/10 rounded-[40px] p-10 md:p-14 space-y-10 text-gray-300 leading-relaxed">
+    
+    <div>
+      <h3 className="text-xl font-black uppercase text-white mb-2">
+        How the Point System Works
+      </h3>
+      <p>
+        Every game in Project Pickup contributes to your team’s standing.
+        Results are tracked using a simple points system that rewards winning consistently.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-black uppercase text-white mb-2">
+        Scoring Rules
+      </h3>
+      <ul className="space-y-2 font-bold">
+        <li>🏆 Win (Sweep) = 3 Points</li>
+        <li>🤝 Draw (Split) = 1 Point</li>
+        <li>❌ Loss = 0 Points</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-black uppercase text-white mb-2">
+        Standings
+      </h3>
+      <p>
+        Teams are ranked by total points. If tied, head-to-head results and point differential may be used as tiebreakers.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-black uppercase text-white mb-2">
+        Season Format
+      </h3>
+      <p>
+        Each team plays a fixed number of matchups. The team with the most points at the end of the season is crowned champion of their league.
+      </p>
+    </div>
+
+  </div>
+</section>
       {/* Join Section */}
       <section id="join" className="py-32 bg-neutral-950 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-orange-500/5 blur-[120px] rounded-full"></div>
