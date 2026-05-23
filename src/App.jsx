@@ -11,7 +11,7 @@ const Logo = ({ className = "w-12 h-12" }) => (
       viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-full drop-shadow-[0_0_15px_rgba(255,107,0,0.3)]"
+      className="w-full h-full"
     >
       <circle cx="50" cy="50" r="42" stroke="#FF6B00" strokeWidth="6" />
       <path
@@ -32,6 +32,10 @@ const App = () => {
     { rank: 2, team: "Back Bay Ballers", w: 13, d: 3, l: 2, pts: 42 },
     { rank: 3, team: "Cambridge Classics", w: 11, d: 4, l: 3, pts: 37 },
     { rank: 4, team: "Seaport Swish", w: 10, d: 2, l: 6, pts: 32 },
+    { rank: 5, team: "Mass Ave Mambas", w: 9, d: 4, l: 5, pts: 31 },
+    { rank: 6, team: "Fenway Flyers", w: 8, d: 2, l: 8, pts: 26 },
+    { rank: 7, team: "Beacon Hill Bruins", w: 7, d: 3, l: 8, pts: 24 },
+    { rank: 8, team: "Southie Snipers", w: 5, d: 5, l: 8, pts: 20 },
   ];
 
   const socialStandings = [
@@ -39,6 +43,10 @@ const App = () => {
     { rank: 2, team: "Esplanade Easy-Buckets", w: 11, d: 5, l: 2, pts: 38 },
     { rank: 3, team: "T-Stop Travelers", w: 10, d: 4, l: 4, pts: 34 },
     { rank: 4, team: "Duck Boat Droppers", w: 9, d: 3, l: 6, pts: 30 },
+    { rank: 5, team: "Prudential Put-Backs", w: 8, d: 6, l: 4, pts: 30 },
+    { rank: 6, team: "Common Courts", w: 7, d: 4, l: 7, pts: 25 },
+    { rank: 7, team: "Coolidge Corner Crew", w: 6, d: 5, l: 7, pts: 23 },
+    { rank: 8, team: "Harbor Hoopsters", w: 5, d: 2, l: 11, pts: 17 },
   ];
 
   const currentStandings =
@@ -50,34 +58,22 @@ const App = () => {
       {/* NAV */}
       <nav className="fixed top-0 w-full z-50 bg-black/90 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-
-          <div className="flex items-center gap-3">
-            <Logo />
-            <div className="font-black uppercase">
-              Project <span className="text-orange-500">Pickup</span>
-            </div>
-          </div>
-
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
+          <Logo />
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="min-h-screen flex items-center justify-center text-center px-6 pt-20">
+      <section className="min-h-screen flex items-center justify-center text-center pt-20">
         <div>
-          <Logo className="w-40 h-40 mx-auto mb-10" />
-
-          <h1 className="text-5xl md:text-7xl font-black italic">
+          <Logo className="w-40 h-40 mx-auto mb-8" />
+          <h1 className="text-5xl font-black italic">
             CHASE THE <span className="text-orange-500">POINTS</span>
           </h1>
 
-          <p className="mt-6 text-gray-400 max-w-xl mx-auto">
-            Competitive and social basketball leagues in Boston.
-          </p>
-
-          <div className="mt-10 flex gap-4 justify-center">
+          <div className="mt-8 flex gap-4 justify-center">
             <a href="#standings" className="bg-white text-black px-6 py-3 font-bold">
               Standings
             </a>
@@ -91,7 +87,7 @@ const App = () => {
       {/* STANDINGS */}
       <section id="standings" className="py-24 px-6 max-w-6xl mx-auto">
 
-        <div className="flex gap-4 mb-10">
+        <div className="flex gap-4 mb-8">
           <button
             onClick={() => setActiveLeague('elite')}
             className={`px-4 py-2 ${activeLeague === 'elite' ? 'bg-orange-500 text-black' : 'bg-white/10'}`}
@@ -108,8 +104,8 @@ const App = () => {
         </div>
 
         <table className="w-full text-left">
-          <thead className="text-gray-500 text-sm">
-            <tr>
+          <thead>
+            <tr className="text-gray-400">
               <th>Rank</th>
               <th>Team</th>
               <th>W</th>
@@ -133,6 +129,14 @@ const App = () => {
           </tbody>
         </table>
 
+        {/* LIVE RULES (FIXED LOCATION) */}
+        <div className="mt-10 bg-white/5 p-6 rounded-xl">
+          <h3 className="font-bold mb-2">Live Rules</h3>
+          <p className="text-gray-400 text-sm">
+            Win = 3 pts, Draw = 1 pt, Loss = 0 pts
+          </p>
+        </div>
+
       </section>
 
       {/* JOIN */}
@@ -141,29 +145,11 @@ const App = () => {
 
         <a
           href="https://tally.so/r/7RaJMR"
-          target="_blank"
-          rel="noreferrer"
           className="inline-block mt-8 bg-orange-500 text-black px-8 py-4 font-black"
         >
           Apply Now
         </a>
       </section>
-
-      {/* FOOTER */}
-      <footer className="py-20 text-center border-t border-white/10">
-        <div className="flex justify-center gap-8 mb-6">
-          <a href="https://instagram.com/project.pickup">
-            <Camera />
-          </a>
-          <a href="mailto:test@email.com">
-            <Mail />
-          </a>
-        </div>
-
-        <p className="text-gray-600 text-xs">
-          © Project Pickup
-        </p>
-      </footer>
 
     </div>
   );
