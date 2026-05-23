@@ -53,7 +53,7 @@ const App = () => {
     activeLeague === 'elite' ? eliteStandings : socialStandings;
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white font-sans">
 
       {/* NAV */}
       <nav className="fixed top-0 w-full z-50 bg-black/90 border-b border-white/10">
@@ -69,9 +69,14 @@ const App = () => {
       <section className="min-h-screen flex items-center justify-center text-center pt-20">
         <div>
           <Logo className="w-40 h-40 mx-auto mb-8" />
-          <h1 className="text-5xl font-black italic">
+
+          <h1 className="text-5xl md:text-7xl font-black italic">
             CHASE THE <span className="text-orange-500">POINTS</span>
           </h1>
+
+          <p className="mt-6 text-gray-400">
+            Boston pickup basketball leagues.
+          </p>
 
           <div className="mt-8 flex gap-4 justify-center">
             <a href="#standings" className="bg-white text-black px-6 py-3 font-bold">
@@ -84,7 +89,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* STANDINGS */}
+      {/* STANDINGS (SINGLE CLEAN VERSION) */}
       <section id="standings" className="py-24 px-6 max-w-6xl mx-auto">
 
         <div className="flex gap-4 mb-8">
@@ -129,14 +134,6 @@ const App = () => {
           </tbody>
         </table>
 
-        {/* LIVE RULES (FIXED LOCATION) */}
-        <div className="mt-10 bg-white/5 p-6 rounded-xl">
-          <h3 className="font-bold mb-2">Live Rules</h3>
-          <p className="text-gray-400 text-sm">
-            Win = 3 pts, Draw = 1 pt, Loss = 0 pts
-          </p>
-        </div>
-
       </section>
 
       {/* JOIN */}
@@ -150,6 +147,22 @@ const App = () => {
           Apply Now
         </a>
       </section>
+
+      {/* FOOTER */}
+      <footer className="py-20 text-center border-t border-white/10">
+        <div className="flex justify-center gap-8 mb-6">
+          <a href="https://instagram.com/project.pickup">
+            <Camera />
+          </a>
+          <a href="mailto:test@email.com">
+            <Mail />
+          </a>
+        </div>
+
+        <p className="text-gray-600 text-xs">
+          © Project Pickup
+        </p>
+      </footer>
 
     </div>
   );
