@@ -308,7 +308,7 @@ const App = () => {
         How the Point System Works
       </h3>
       <p>
-        Every game in Project Pickup contributes to your team’s standing. Each team has two games per week that count towards your point total.
+        Every game in Project Pickup contributes to your team’s standing. Each team has two games per week (14 total weeks, 28 total games) that count towards your point total.
         Win both games, that's a sweep. Win one, that's a split. Win none... I think you know the rest.
         Results are tracked using a simple points system that rewards winning consistently.
       </p>
