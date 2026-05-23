@@ -85,41 +85,47 @@ const App = () => {
 
   // Initializing with current standings teams
   const [eliteTeams, setEliteTeams] = useState([
-    "Charles River Crossovers", "Back Bay Ballers", "Cambridge Classics", "Seaport Swish", 
-    "Mass Ave Mambas", "Fenway Flyers", "Beacon Hill Bruins", "Southie Snipers", 
-    "Quincy Quakes", "Dot Ave Dunkers"
-  ]);
+  "Charles River Crossovers",
+  "Back Bay Ballers",
+  "Cambridge Classics",
+  "Seaport Swish",
+  "Mass Ave Mambas",
+  "Fenway Flyers",
+  "Beacon Hill Bruins",
+  "Southie Snipers"
+]);
   const [socialTeams, setSocialTeams] = useState([
-    "Public Garden Pigeons", "Esplanade Easy-Buckets", "T-Stop Travelers", "Duck Boat Droppers", 
-    "Prudential Put-Backs", "Common Courts", "Coolidge Corner Crew", "Harbor Hoopsters", 
-    "Allston Alley-Oops", "North End Layups"
-  ]);
+  "Public Garden Pigeons",
+  "Esplanade Easy-Buckets",
+  "T-Stop Travelers",
+  "Duck Boat Droppers",
+  "Prudential Put-Backs",
+  "Common Courts",
+  "Coolidge Corner Crew",
+  "Harbor Hoopsters"
+]);
 
   const eliteStandings = [
-    { rank: 1, team: "Charles River Crossovers", w: 14, d: 2, l: 2, pts: 44 },
-    { rank: 2, team: "Back Bay Ballers", w: 13, d: 3, l: 2, pts: 42 },
-    { rank: 3, team: "Cambridge Classics", w: 11, d: 4, l: 3, pts: 37 },
-    { rank: 4, team: "Seaport Swish", w: 10, d: 2, l: 6, pts: 32 },
-    { rank: 5, team: "Mass Ave Mambas", w: 9, d: 4, l: 5, pts: 31 },
-    { rank: 6, team: "Fenway Flyers", w: 8, d: 2, l: 8, pts: 26 },
-    { rank: 7, team: "Beacon Hill Bruins", w: 7, d: 3, l: 8, pts: 24 },
-    { rank: 8, team: "Southie Snipers", w: 5, d: 5, l: 8, pts: 20 },
-    { rank: 9, team: "Quincy Quakes", w: 4, d: 2, l: 12, pts: 14 },
-    { rank: 10, team: "Dot Ave Dunkers", w: 2, d: 1, l: 15, pts: 7 },
-  ];
+  { rank: 1, team: "Charles River Crossovers", w: 14, d: 2, l: 2, pts: 44 },
+  { rank: 2, team: "Back Bay Ballers", w: 13, d: 3, l: 2, pts: 42 },
+  { rank: 3, team: "Cambridge Classics", w: 11, d: 4, l: 3, pts: 37 },
+  { rank: 4, team: "Seaport Swish", w: 10, d: 2, l: 6, pts: 32 },
+  { rank: 5, team: "Mass Ave Mambas", w: 9, d: 4, l: 5, pts: 31 },
+  { rank: 6, team: "Fenway Flyers", w: 8, d: 2, l: 8, pts: 26 },
+  { rank: 7, team: "Beacon Hill Bruins", w: 7, d: 3, l: 8, pts: 24 },
+  { rank: 8, team: "Southie Snipers", w: 5, d: 5, l: 8, pts: 20 },
+];
 
   const socialStandings = [
-    { rank: 1, team: "Public Garden Pigeons", w: 12, d: 4, l: 2, pts: 40 },
-    { rank: 2, team: "Esplanade Easy-Buckets", w: 11, d: 5, l: 2, pts: 38 },
-    { rank: 3, team: "T-Stop Travelers", w: 10, d: 4, l: 4, pts: 34 },
-    { rank: 4, team: "Duck Boat Droppers", w: 9, d: 3, l: 6, pts: 30 },
-    { rank: 5, team: "Prudential Put-Backs", w: 8, d: 6, l: 4, pts: 30 },
-    { rank: 6, team: "Common Courts", w: 7, d: 4, l: 7, pts: 25 },
-    { rank: 7, team: "Coolidge Corner Crew", w: 6, d: 5, l: 7, pts: 23 },
-    { rank: 8, team: "Harbor Hoopsters", w: 5, d: 2, l: 11, pts: 17 },
-    { rank: 9, team: "Allston Alley-Oops", w: 3, d: 4, l: 11, pts: 13 },
-    { rank: 10, team: "North End Layups", w: 1, d: 3, l: 14, pts: 6 },
-  ];
+  { rank: 1, team: "Public Garden Pigeons", w: 12, d: 4, l: 2, pts: 40 },
+  { rank: 2, team: "Esplanade Easy-Buckets", w: 11, d: 5, l: 2, pts: 38 },
+  { rank: 3, team: "T-Stop Travelers", w: 10, d: 4, l: 4, pts: 34 },
+  { rank: 4, team: "Duck Boat Droppers", w: 9, d: 3, l: 6, pts: 30 },
+  { rank: 5, team: "Prudential Put-Backs", w: 8, d: 6, l: 4, pts: 30 },
+  { rank: 6, team: "Common Courts", w: 7, d: 4, l: 7, pts: 25 },
+  { rank: 7, team: "Coolidge Corner Crew", w: 6, d: 5, l: 7, pts: 23 },
+  { rank: 8, team: "Harbor Hoopsters", w: 5, d: 2, l: 11, pts: 17 },
+];
 
   const handleApply = (e) => {
   e.preventDefault();
