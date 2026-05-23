@@ -123,7 +123,7 @@ const App = () => {
 
   const handleApply = (e) => {
   e.preventDefault();
-  window.open("https://tally.so/r/QKzxOG", "_blank");
+  window.open("https://tally.so/r/7RaJMR", "_blank");
 };
 
   const currentStandings = activeLeague === 'elite' ? eliteStandings : socialStandings;
