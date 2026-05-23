@@ -4,7 +4,6 @@ import {
   Menu, X, Mail, ChevronRight,
   Camera, Zap, Coffee, AlertCircle
 } from 'lucide-react';
-import { FaInstagram } from "react-icons/fa";
 
 // --- Utility: Fuzzy Matching (Levenshtein Distance) ---
 const getLevenshteinDistance = (a, b) => {
