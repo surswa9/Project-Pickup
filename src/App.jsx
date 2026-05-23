@@ -314,7 +314,7 @@ const App = () => {
   </p>
 
   <a
-    href="https://tally.so/r/YOUR_FORM_ID"
+    href="https://tally.so/r/7RaJMR"
     target="_blank"
     rel="noreferrer"
     className="inline-block w-full py-6 bg-white text-black font-black uppercase text-lg tracking-widest skew-x-[-10deg] hover:bg-orange-500 hover:text-white transition-all"
