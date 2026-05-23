@@ -4,6 +4,7 @@ import {
   Menu, X, Mail, ChevronRight,
   Camera, Zap, Coffee, AlertCircle
 } from 'lucide-react';
+import { FaInstagram } from "react-icons/fa";
 
 // --- Utility: Fuzzy Matching (Levenshtein Distance) ---
 const getLevenshteinDistance = (a, b) => {
@@ -331,7 +332,13 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
           <Logo className="w-24 h-24 mb-10" />
           <div className="flex gap-12 mb-16">
-            <Camera className="w-6 h-6 text-gray-500 hover:text-white transition-colors cursor-pointer" />
+            <a
+  href="https://instagram.com/project.pickup"
+  target="_blank"
+  rel="noreferrer"
+>
+  <FaInstagram className="w-6 h-6 text-gray-500 hover:text-white transition-colors cursor-pointer" />
+</a>
             <Mail className="w-6 h-6 text-gray-500 hover:text-white transition-colors cursor-pointer" />
           </div>
           <p className="text-gray-800 text-[10px] font-black uppercase tracking-[1em]">
