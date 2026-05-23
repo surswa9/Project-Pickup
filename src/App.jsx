@@ -219,7 +219,15 @@ const App = () => {
       <section id="standings" className="py-32 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>
-            <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter">The <span className="text-orange-500">Table</span></h2>
+            <div className="flex items-end gap-3 flex-wrap">
+  <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter">
+    The <span className="text-orange-500">Table</span>
+  </h2>
+
+  <span className="text-xs md:text-sm text-gray-500 italic mb-2">
+    (illustrative only)
+  </span>
+</div>
             
             {/* League Toggle */}
             <div className="flex gap-4 mt-8">
